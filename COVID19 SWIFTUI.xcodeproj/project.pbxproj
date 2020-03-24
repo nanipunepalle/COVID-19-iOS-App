@@ -14,6 +14,16 @@
 		3D313CB72428F446001466ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D313CB62428F446001466ED /* Assets.xcassets */; };
 		3D313CBA2428F446001466ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D313CB92428F446001466ED /* Preview Assets.xcassets */; };
 		3D313CBD2428F446001466ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D313CBB2428F446001466ED /* LaunchScreen.storyboard */; };
+		3D313CC72428F680001466ED /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D313CC42428F680001466ED /* DataModel.swift */; };
+		3D313CC82428F680001466ED /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D313CC52428F680001466ED /* APIManager.swift */; };
+		3D313CC92428F680001466ED /* WorldStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D313CC62428F680001466ED /* WorldStats.swift */; };
+		3D6145672429C0200051BCE2 /* DashBoardCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6145662429C0200051BCE2 /* DashBoardCell2.swift */; };
+		3D6145692429D15A0051BCE2 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6145682429D15A0051BCE2 /* TabBarView.swift */; };
+		3D61456B2429D1ED0051BCE2 /* StatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D61456A2429D1ED0051BCE2 /* StatesView.swift */; };
+		3D61456D2429D2320051BCE2 /* StatesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D61456C2429D2320051BCE2 /* StatesCellView.swift */; };
+		3DD3C76724292160003F41F3 /* DashboardCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3C76624292160003F41F3 /* DashboardCell1.swift */; };
+		3DD3C76924293102003F41F3 /* IndiaStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3C76824293102003F41F3 /* IndiaStats.swift */; };
+		3DD3C76B24293190003F41F3 /* IndiaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3C76A24293190003F41F3 /* IndiaDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +36,16 @@
 		3D313CB92428F446001466ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D313CBC2428F446001466ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D313CBE2428F446001466ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D313CC42428F680001466ED /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		3D313CC52428F680001466ED /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		3D313CC62428F680001466ED /* WorldStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldStats.swift; sourceTree = "<group>"; };
+		3D6145662429C0200051BCE2 /* DashBoardCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardCell2.swift; sourceTree = "<group>"; };
+		3D6145682429D15A0051BCE2 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		3D61456A2429D1ED0051BCE2 /* StatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesView.swift; sourceTree = "<group>"; };
+		3D61456C2429D2320051BCE2 /* StatesCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesCellView.swift; sourceTree = "<group>"; };
+		3DD3C76624292160003F41F3 /* DashboardCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell1.swift; sourceTree = "<group>"; };
+		3DD3C76824293102003F41F3 /* IndiaStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiaStats.swift; sourceTree = "<group>"; };
+		3DD3C76A24293190003F41F3 /* IndiaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiaDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +80,8 @@
 			children = (
 				3D313CAD2428F443001466ED /* AppDelegate.swift */,
 				3D313CAF2428F443001466ED /* SceneDelegate.swift */,
-				3D313CB42428F443001466ED /* ContentView.swift */,
+				3D313CCB2428F6AC001466ED /* View */,
+				3D313CCA2428F69F001466ED /* Model */,
 				3D313CB62428F446001466ED /* Assets.xcassets */,
 				3D313CBB2428F446001466ED /* LaunchScreen.storyboard */,
 				3D313CBE2428F446001466ED /* Info.plist */,
@@ -76,6 +97,31 @@
 				3D313CB92428F446001466ED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3D313CCA2428F69F001466ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D313CC52428F680001466ED /* APIManager.swift */,
+				3D313CC42428F680001466ED /* DataModel.swift */,
+				3D313CC62428F680001466ED /* WorldStats.swift */,
+				3DD3C76824293102003F41F3 /* IndiaStats.swift */,
+				3DD3C76A24293190003F41F3 /* IndiaDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D313CCB2428F6AC001466ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D6145682429D15A0051BCE2 /* TabBarView.swift */,
+				3D313CB42428F443001466ED /* ContentView.swift */,
+				3D61456A2429D1ED0051BCE2 /* StatesView.swift */,
+				3DD3C76624292160003F41F3 /* DashboardCell1.swift */,
+				3D6145662429C0200051BCE2 /* DashBoardCell2.swift */,
+				3D61456C2429D2320051BCE2 /* StatesCellView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +195,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD3C76724292160003F41F3 /* DashboardCell1.swift in Sources */,
+				3D313CC82428F680001466ED /* APIManager.swift in Sources */,
+				3D61456D2429D2320051BCE2 /* StatesCellView.swift in Sources */,
+				3D313CC92428F680001466ED /* WorldStats.swift in Sources */,
+				3D313CC72428F680001466ED /* DataModel.swift in Sources */,
 				3D313CB32428F443001466ED /* COVID19_SWIFTUI.xcdatamodeld in Sources */,
+				3DD3C76924293102003F41F3 /* IndiaStats.swift in Sources */,
 				3D313CAE2428F443001466ED /* AppDelegate.swift in Sources */,
+				3DD3C76B24293190003F41F3 /* IndiaDataModel.swift in Sources */,
+				3D6145672429C0200051BCE2 /* DashBoardCell2.swift in Sources */,
 				3D313CB52428F443001466ED /* ContentView.swift in Sources */,
+				3D6145692429D15A0051BCE2 /* TabBarView.swift in Sources */,
+				3D61456B2429D1ED0051BCE2 /* StatesView.swift in Sources */,
 				3D313CB02428F443001466ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
