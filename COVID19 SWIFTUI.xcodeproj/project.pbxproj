@@ -46,6 +46,7 @@
 		3DD3C76624292160003F41F3 /* DashboardCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell1.swift; sourceTree = "<group>"; };
 		3DD3C76824293102003F41F3 /* IndiaStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiaStats.swift; sourceTree = "<group>"; };
 		3DD3C76A24293190003F41F3 /* IndiaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiaDataModel.swift; sourceTree = "<group>"; };
+		3DE38D1F242A3A5A00F1A02E /* COVID19 SWIFTUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "COVID19 SWIFTUI.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 		3D313CAC2428F443001466ED /* COVID19 SWIFTUI */ = {
 			isa = PBXGroup;
 			children = (
+				3DE38D1F242A3A5A00F1A02E /* COVID19 SWIFTUI.entitlements */,
 				3D313CAD2428F443001466ED /* AppDelegate.swift */,
 				3D313CAF2428F443001466ED /* SceneDelegate.swift */,
 				3D313CCB2428F6AC001466ED /* View */,
@@ -344,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "COVID19 SWIFTUI/COVID19 SWIFTUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"COVID19 SWIFTUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 522LP8JL6D;
@@ -355,6 +358,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lalith.COVID19-SWIFTUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "COVID19 SWIFTUI/COVID19 SWIFTUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"COVID19 SWIFTUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 522LP8JL6D;
@@ -375,6 +380,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lalith.COVID19-SWIFTUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

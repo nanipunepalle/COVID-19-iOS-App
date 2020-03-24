@@ -34,11 +34,14 @@ struct StatesView: View,APIManagerDelegate {
                     Text(data.loc).font(.system(size: 30))
                     DashBoardCell2(total: data.confirmedCasesIndian + data.confirmedCasesForeign, indians: data.confirmedCasesIndian, foreigners: data.confirmedCasesForeign, deaths: data.deaths, recovered: data.discharged)
                 }
-                
-                
-            }
-        }.onAppear {
-            self.apiManager.performRequest()
+            }.onAppear {
+                self.apiManager.performRequest()
+            }.navigationBarTitle(Text("States DashBoard")
+            .foregroundColor(.red),displayMode: .inline)
+                .navigationBarItems(trailing:
+            Button("Refresh"){
+                self.apiManager.performRequest()
+            }.foregroundColor(Color("GreenColor")))
         }
 
     }

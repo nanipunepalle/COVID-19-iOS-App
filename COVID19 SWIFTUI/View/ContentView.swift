@@ -78,7 +78,8 @@ struct ContentView: View,APIManagerDelegate{
                 self.apiManager.delegate = self
                 
             }.navigationBarTitle(Text("Dash Board")
-                .foregroundColor(.red),displayMode: .inline).navigationBarItems(trailing:
+                .foregroundColor(.red),displayMode: .inline)
+                .navigationBarItems(trailing:
                     Button("Refresh"){
                         self.apiManager.performRequest()
                     }.foregroundColor(Color("GreenColor")))
