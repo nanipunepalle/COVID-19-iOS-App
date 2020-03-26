@@ -9,6 +9,12 @@
 import SwiftUI
 
 struct StatesView: View,APIManagerDelegate {
+    func didUpdateCountryStats(apiManager: APIManager, countryStats: [CountryDataModel]) {
+        
+    }
+    
+
+    
     func didUpdateStateStats(apiManager: APIManager, indiastats: IndiaStats) {
         //        IndiaStats.data.s
     }

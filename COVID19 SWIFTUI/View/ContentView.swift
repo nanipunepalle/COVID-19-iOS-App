@@ -9,6 +9,11 @@
 import SwiftUI
 
 struct ContentView: View,APIManagerDelegate{
+    func didUpdateCountryStats(apiManager: APIManager, countryStats: [CountryDataModel]) {
+        
+    }
+    
+    
     func didUpdateStateStats(apiManager: APIManager, indiastats: IndiaStats) {
         
     }
@@ -76,6 +81,7 @@ struct ContentView: View,APIManagerDelegate{
             }.onAppear {
                 self.apiManager.performRequest()
                 self.apiManager.delegate = self
+//                APIManager2().fetchData()
                 
             }.navigationBarTitle(Text("Dash Board")
                 .foregroundColor(.red),displayMode: .inline)

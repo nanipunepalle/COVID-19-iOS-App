@@ -7,18 +7,22 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol APIManagerDelegate {
     func didUpdateWorldStats(apiManager: APIManager,dataModel: DataModel)
     func didUpdateIndiaStat(apiManager: APIManager,indiaDataModel: IndiaDataModel)
     func didFinishWithError (error: Error)
     func didUpdateStateStats(apiManager: APIManager,indiastats: IndiaStats)
+    func didUpdateCountryStats(apiManager: APIManager,countryStats: [CountryDataModel])
 }
 
 class APIManager: ObservableObject{
     let url1 = "https://corona.lmao.ninja/all"
     let url2 = "https://api.rootnet.in/covid19-in/stats/latest"
+    let url3 = "https://corona.lmao.ninja/countries"
     var delegate: APIManagerDelegate?
+    
     @Published var regionalData = [Regional]()
     
     func performRequest(){
@@ -28,7 +32,7 @@ class APIManager: ObservableObject{
             let task1 = URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if error != nil{
                     self.delegate?.didFinishWithError(error: error!)
-                    return
+//                    return
                 }
                 if let safeData = data{
                     let decoder = JSONDecoder()
@@ -67,12 +71,11 @@ class APIManager: ObservableObject{
                         
                         DispatchQueue.main.async {
                             self.regionalData = decoded.data.regional
-//                            print(self.regionalData.loc)
+                            //                            print(self.regionalData.loc)
                         }
                         
                         let new = IndiaDataModel(total: total, confirmedCasesIndian: indian, confirmedCasesForeign: foreign, deaths: deaths, discharged: recovered)
                         self.delegate?.didUpdateIndiaStat(apiManager: self, indiaDataModel: new)
-//                        print(total)
                     }
                     catch{
                         self.delegate?.didFinishWithError(error: error)
@@ -81,6 +84,29 @@ class APIManager: ObservableObject{
                 }
             }
             task2.resume()
+//            var request3 = URLRequest(url: wurl)
+//            request3.httpMethod = "GET"
+//            let task3 = URLSession.shared.dataTask(with: request3) { (data, response, err) in
+//                if err != nil{
+//                    print(err ?? "error")
+//                }
+//                if let safeData = data{
+//                    let decoder = JSONDecoder()
+//                    do{
+//                        let decoded = try decoder.decode([CountryDataModel].self, from: safeData)
+//                        DispatchQueue.main.async {
+//
+//                            self.countryData = decoded
+//
+//                        }
+//
+//                    }
+//                    catch{
+//                        print(error)
+//                    }
+//                }
+//            }
+//            task3.resume()
             
         }
     }

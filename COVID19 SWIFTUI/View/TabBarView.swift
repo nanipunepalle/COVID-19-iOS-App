@@ -19,6 +19,12 @@ struct TabBarView: View {
                 Image(systemName: "house.fill")
                 Text("States data")
             }
+            WorldView(apimanager: APIManager2()).tabItem {
+                Image(systemName: "house.fill")
+                Text("World Data")
+            }.onAppear {
+                APIManager2().fetchData()
+            }
         }
     }
 }
