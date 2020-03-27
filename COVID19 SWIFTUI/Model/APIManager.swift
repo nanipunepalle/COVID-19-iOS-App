@@ -32,7 +32,6 @@ class APIManager: ObservableObject{
             let task1 = URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if error != nil{
                     self.delegate?.didFinishWithError(error: error!)
-//                    return
                 }
                 if let safeData = data{
                     let decoder = JSONDecoder()
@@ -84,29 +83,6 @@ class APIManager: ObservableObject{
                 }
             }
             task2.resume()
-//            var request3 = URLRequest(url: wurl)
-//            request3.httpMethod = "GET"
-//            let task3 = URLSession.shared.dataTask(with: request3) { (data, response, err) in
-//                if err != nil{
-//                    print(err ?? "error")
-//                }
-//                if let safeData = data{
-//                    let decoder = JSONDecoder()
-//                    do{
-//                        let decoded = try decoder.decode([CountryDataModel].self, from: safeData)
-//                        DispatchQueue.main.async {
-//
-//                            self.countryData = decoded
-//
-//                        }
-//
-//                    }
-//                    catch{
-//                        print(error)
-//                    }
-//                }
-//            }
-//            task3.resume()
             
         }
     }

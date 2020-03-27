@@ -27,16 +27,11 @@ class MapViewDataModel: NSObject,MKAnnotation{
         var all:[MapViewDataModel] = []
         
         for country in Countries {
-            let dataToDisplay = "Total Cases: \(country.cases) \n Deaths: \(country.deaths) \n Recovered: \(country.recovered)"
+            let dataToDisplay = "Total Cases: \(country.cases)  Deaths: \(country.deaths)  Recovered: \(country.recovered)"
             let new = MapViewDataModel(title: country.country, subtitle: dataToDisplay, coordinate: .init(latitude: CLLocationDegrees(country.countryInfo.lat), longitude: CLLocationDegrees(country.countryInfo.long)))
             all.append(new)
         }
         return all
-//
-//        return [
-////            MapViewDataModel(title: "India", coordinate: .init(latitude: 20, longitude: 77)),
-////            MapViewDataModel(title: "USA", coordinate: .init(latitude: 38, longitude: -97))
-//        ]
     }
     
     
