@@ -21,7 +21,7 @@ struct WorldView: View{
                 .navigationBarItems(trailing:
                 Button("Refresh"){
                     self.apimanager.fetchData()
-                }.foregroundColor(Color("GreenColor")))
+                })
         }
         
     }

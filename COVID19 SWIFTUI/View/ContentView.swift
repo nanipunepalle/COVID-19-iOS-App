@@ -9,15 +9,7 @@
 import SwiftUI
 
 struct ContentView: View,APIManagerDelegate{
-    func didUpdateCountryStats(apiManager: APIManager, countryStats: [CountryDataModel]) {
-        
-    }
-    
-    
-    func didUpdateStateStats(apiManager: APIManager, indiastats: IndiaStats) {
-        
-    }
-    
+
     
     
     @State private var totalCases: Int = 0
@@ -71,10 +63,10 @@ struct ContentView: View,APIManagerDelegate{
                         }
                         Spacer()
                         
-                    }.frame(width: width-40, height: 250, alignment: .center).background(Color("DashColor1")).padding()
+                        }.cornerRadius(20).frame(width: width-40, height: 250, alignment: .center).background(Color("DashColor1")).padding()
                     Text("India Stats").bold().font(.system(size: 30))
                     Spacer()
-                    DashBoardCell2(total: indiacases, indians: indians, foreigners: foreign, deaths: indiaDeaths, recovered: indiansRecover)
+                    DashBoardCell2(total: indiacases, indians: indians, foreigners: foreign, deaths: indiaDeaths, recovered: indiansRecover).cornerRadius(20)
                     Spacer()
                 }
                 
@@ -88,7 +80,7 @@ struct ContentView: View,APIManagerDelegate{
                 .navigationBarItems(trailing:
                     Button("Refresh"){
                         self.apiManager.performRequest()
-                    }.foregroundColor(Color("GreenColor")))
+                    })
         }
     }
 }

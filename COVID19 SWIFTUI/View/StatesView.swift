@@ -9,15 +9,6 @@
 import SwiftUI
 
 struct StatesView: View,APIManagerDelegate {
-    func didUpdateCountryStats(apiManager: APIManager, countryStats: [CountryDataModel]) {
-        
-    }
-    
-
-    
-    func didUpdateStateStats(apiManager: APIManager, indiastats: IndiaStats) {
-        //        IndiaStats.data.s
-    }
     
     func didUpdateWorldStats(apiManager: APIManager, dataModel: DataModel) {
     }
@@ -38,7 +29,7 @@ struct StatesView: View,APIManagerDelegate {
                 
                 VStack{
                     Text(data.loc).font(.system(size: 30))
-                    DashBoardCell2(total: data.confirmedCasesIndian + data.confirmedCasesForeign, indians: data.confirmedCasesIndian, foreigners: data.confirmedCasesForeign, deaths: data.deaths, recovered: data.discharged)
+                    DashBoardCell2(total: data.confirmedCasesIndian + data.confirmedCasesForeign, indians: data.confirmedCasesIndian, foreigners: data.confirmedCasesForeign, deaths: data.deaths, recovered: data.discharged).cornerRadius(20)
                 }
             }.onAppear {
                 self.apiManager.performRequest()
@@ -47,7 +38,7 @@ struct StatesView: View,APIManagerDelegate {
                 .navigationBarItems(trailing:
             Button("Refresh"){
                 self.apiManager.performRequest()
-            }.foregroundColor(Color("GreenColor")))
+            })
         }
 
     }

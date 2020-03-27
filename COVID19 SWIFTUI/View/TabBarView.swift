@@ -12,7 +12,7 @@ struct TabBarView: View {
     var body: some View {
         TabView{
             WorldView(apimanager: APIManager2()).tabItem {
-                Image(systemName: "house.fill")
+                Image(systemName: "globe")
                 Text("World Data")
             }
             ContentView().tabItem{
@@ -20,7 +20,7 @@ struct TabBarView: View {
                 Text("Dash Board")
             }
             StatesView().tabItem {
-                Image(systemName: "house.fill")
+                Image(systemName: "line.horizontal.3")
                 Text("States data")
             }
             

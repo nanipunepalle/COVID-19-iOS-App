@@ -17,32 +17,7 @@ class APIManager2: ObservableObject {
         }
     }
     init() {
-        let url1 = "https://corona.lmao.ninja/countries"
-        if let wurl = URL(string: url1){
-            var request3 = URLRequest(url: wurl)
-            request3.httpMethod = "GET"
-            let task3 = URLSession.shared.dataTask(with: request3) { (data, response, err) in
-                if err != nil{
-                    print(err ?? "error")
-                }
-                if let safeData = data{
-                    let decoder = JSONDecoder()
-                    do{
-                        let decoded = try decoder.decode([CountryDataModel].self, from: safeData)
-                        DispatchQueue.main.async {
-                            
-                            self.countryData = decoded
-                            
-                        }
-                        
-                    }
-                    catch{
-                        print(error)
-                    }
-                }
-            }
-            task3.resume()
-        }
+        self.fetchData()
     }
     
     func fetchData() {

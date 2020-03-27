@@ -13,8 +13,6 @@ protocol APIManagerDelegate {
     func didUpdateWorldStats(apiManager: APIManager,dataModel: DataModel)
     func didUpdateIndiaStat(apiManager: APIManager,indiaDataModel: IndiaDataModel)
     func didFinishWithError (error: Error)
-    func didUpdateStateStats(apiManager: APIManager,indiastats: IndiaStats)
-    func didUpdateCountryStats(apiManager: APIManager,countryStats: [CountryDataModel])
 }
 
 class APIManager: ObservableObject{
